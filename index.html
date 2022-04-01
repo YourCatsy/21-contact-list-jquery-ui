@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Title</title>
+  <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script defer src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+  <script defer src="script.js" type="module"></script>
+</head>
+
+<body>
+  <button id="add-button">Добавить контакт</button>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Surname</th>
+      <th>Phone number</th>
+    </tr>
+    <tbody id="contactList"></tbody>
+  </table>
+  <script id="contactItemTemplate" type="text/template">
+    <tr class = "contactItem"
+        data-id="{{id}}"
+        >
+        <td>{{firstName}}</td>
+          <td>{{lastName}}</td>
+          <td>{{phone}}</td>
+          <td>
+            <button type="button" class="editBtn">Edit</button>
+            <button type='button' class="delete-button">Delete line</button>
+        </td>
+    </tr>
+    </script>
+
+  <div id="dialog-form" title="Создать нового пользователя" class="hide">
+    <form>
+      <fieldset>
+        <input type="hidden" name="id">
+
+        <div class="input-style">
+          <label for="firstName">Имя</label>
+          <input type="text" name="firstName" id="firstName" />
+        </div>
+        <div class="input-style">
+          <label for="lastName">Фамилия</label>
+          <input type="text" name="lastName" id="lastName" />
+        </div>
+        <div class="input-style">
+          <label for="phone">Телефон</label>
+          <input type="text" name="phone" id="phone" />
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</body>
+
+</html>

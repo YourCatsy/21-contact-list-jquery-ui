@@ -1,0 +1,13 @@
+.header-buttons {
+    border-bottom: 1px solid black;
+    text-align: right;
+    padding-bottom: 5px;
+}
+
+.hide {
+    display: none;
+}
+
+.input-style {
+    margin: 55px 49px;
+}
